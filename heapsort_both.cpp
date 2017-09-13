@@ -2,7 +2,7 @@
 #include<process.h>
  
 using namespace std;
-maxheapify(int a[],int n,int i)
+void maxheapify(int a[],int n,int i)
 {
 	int largest=i;
 	int left=2*i+1;
@@ -21,7 +21,7 @@ maxheapify(int a[],int n,int i)
 		maxheapify(a,n,largest);
 	}
 }
-minheapify(int a[],int n,int i)
+void minheapify(int a[],int n,int i)
 {
 	int smallest=i;
 	int left=2*i+1;
@@ -40,7 +40,7 @@ minheapify(int a[],int n,int i)
 		minheapify(a,n,smallest);
 	}
 }
- MaxheapSort(int a[],int n)
+ void MaxheapSort(int a[],int n)
  {
  	for(int i=n/2-1;i>=0;i--)
  	{
@@ -52,7 +52,7 @@ minheapify(int a[],int n,int i)
 		maxheapify(a,i,0);
 	}
  }
- MinheapSort(int a[],int n)
+ void MinheapSort(int a[],int n)
  {
  	for(int i=n/2-1;i>=0;i--)
  	{
@@ -101,7 +101,7 @@ int main()
 	cout<< "sorted array is : Min Heap";
 	print(a,n);
 
-	
+	system("pause");
 	return 0;
 	
 }
